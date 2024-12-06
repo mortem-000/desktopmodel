@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourism Dashboard</title>
+<style>
+/* Global styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  background-color: #F7F4F4;
+}
+
+header {
+  background-color: #E6D0B0;
+  padding: 15px;
+}
+
+.header-content {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+.user-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  background-color: #fff8dc;
+  padding: 10px;
+}
+
+.navbar p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.insights-cards,
+.explore-cards {
+  display: grid;
+  gap: 15px;
+  /* flex-wrap: wrap; */
+  grid-template-columns:  repeat(4, 1fr);
+
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+  margin: 5px;
+}
+    .explore-card img {
+  height: auto;
+  border-radius: 10px;
+  margin: 5px;
+}
+.explore-card {
+  flex: 1;
+  margin: 10px;
+}
+
+.explore-card img {
+  width:100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card .icon {
+  font-size: 30px;
+}
+
+.card .number {
+  font-size: 14px;
+  color: gray;
+}
+
+footer {
+  display: grid;
+  justify-content: center;
+  padding: 15px;
+  background-color: #F1F1F1;
+}
+
+footer button {
+  background-color: white;
+  border: 2px solid #E0E0E0;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+footer button:hover {
+  background-color: #E6D0B0;
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Two columns layout for cards */
+  .insights-cards, .explore-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 15px;
+  }
+
+  .card, .explore-card {
+    min-width: unset; /* Reset min-width */
+  }
+
+  footer {
+    flex-direction: row;
+  }
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+ 
+</head>
+<body>
+  <main>
+    
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="images/Bhakta-Tour.png" alt="Logo" width="100" height="75" class="d-inline-block align-text-top">
+          </a>
+          <p><b>Bhakta-Tour</b></p>
+        </div>
+      </nav>
+    
+    <section class="insights">
+      <u><h2>Our Services</h2></u>
+      <br>
+      <div class="insights-cards">
+        <div class="card">
+          <div class="icon"> <img src="images/scanlogo.png" alt="Scan Here"></div>
+          <p>Scan new</p>
+          <p class="number">Scanned 483</p>
+        </div>
+        <div class="card">
+          <div class="icon"><img src="images/Ask_Pasa.jpg" alt="Ask Pasa"></div>
+          <p>Ask Pasa</p>
+          <p class="number">Jwojoloppa</p>
+        </div>
+        <div class="card">
+          <div class="icon"><img src="images/Places Visited.jpg" alt="Places Visited"></div>
+          <p>Places</p>
+          <p class="number">Visited 9</p>
+        </div>
+        <div class="card">
+          <div class="icon"><img src="images/Festivals.jpg" alt="Upcoming Festivals"></div>
+          <p>Festivals</p>
+          <p class="number">Upcoming: Yamari Puhini</p>
+        </div>
+      </div>
+    </section>  
+
+    <section class="explore">
+      <br>
+      <br>
+      <u><h2>Explore More</h2></u>
+      <div class="explore-cards">
+        <div class="explore-card">
+          <img src="images/Dattatraya temple.jpg" alt="Image 1">
+          <p class="footer-text">Dattatraya Temple</p>
+        </div>
+        <div class="explore-card">
+          <img src="images/changu-narayan.jpg" alt="Image 2">
+          <p class="footer-text">Changu Narayan Temple</p>
+        </div>
+        <div class="explore-card">
+          <img src="images/Nyatapola.jpg" alt="Image 3">
+          <p class="footer-text">Nyatapola Temple</p>
+        </div>
+        <div class="explore-card">
+            <img src="images/Juju-Dhu.jpg" alt="Image 3">
+            <p class="footer-text">JUJU Dhau</p>
+          </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
